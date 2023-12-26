@@ -1,0 +1,13 @@
+import React from "react";
+import GameState from "./GameState";
+
+export default function Resets({ gameState, onReset }) {
+  if (gameState === GameState.inProgress) {
+    return;
+  }
+  return (
+    <button onClick={onReset} className="reset-button">
+      Reset
+    </button>
+  );
+}
